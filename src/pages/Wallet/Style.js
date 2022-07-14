@@ -31,9 +31,9 @@ export const DivDespesas = styled.div`
   flex-direction: row;
   margin-top: 15px;
   margin-bottom: 10px;
-  // border: 1px solid red;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   form {
+    gap: 16px;
     color: #93032E;
     input {
       color: #4D7C8A;
@@ -60,6 +60,7 @@ export const DivDespesas = styled.div`
       font-weight: bold;
       cursor: pointer;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+      margin-bottom: 10px;
     }
   }
 `;

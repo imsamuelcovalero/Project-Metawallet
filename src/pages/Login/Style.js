@@ -11,18 +11,32 @@ export const DivGlobal = styled.div`
 
 export const Div = styled.div`
   width: 400px;
-  height: 240px;
+  height: 290px;
   border: 1px solid #e1e5eb;
   background: ${(props) => (props.corFundo ? props.corFundo : '#4D7C8A')};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // align-self: center;
-  // align-content: center;
-  color: #EFA00B;
+  font-size: 16px;
+  color: #FE5E41;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  #logo {
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  #btc {
+    width: 38px;
+  }
+  #loginBtc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+  }
   form {
     input {
       border: 1px solid #e1e5eb;
@@ -46,7 +60,11 @@ export const Btn = styled.button`
   }
   :enabled {
     background-color: #4D7C8A;
+    color: #FE5E41;
+    border: 1px solid #FE5E41;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   }
+  font-size: 16px;
   border: 1px solid #EFA00B;
   border-radius: 5px;
   margin-top: 15px;

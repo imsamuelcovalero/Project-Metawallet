@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setUserEmail } from '../../actions';
 import { Div, Btn, DivGlobal } from './Style';
+import logo from '../../images/MetaWallet.png';
+import btc1 from '../../images/Bitcoin_Uniforme.png';
 
 class Login extends Component {
   constructor() {
@@ -49,7 +51,11 @@ class Login extends Component {
     return (
       <DivGlobal>
         <Div>
-          <h1>Login</h1>
+          <img id="logo" src={ logo } alt="logo" />
+          <div id="loginBtc">
+            <h1>Login</h1>
+            <img id="btc" src={ btc1 } alt="btc" />
+          </div>
           <form>
             <input
               data-testid="email-input"
