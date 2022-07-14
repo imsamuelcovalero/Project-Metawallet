@@ -157,7 +157,14 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 EditarDespesa.propTypes = {
-  expenseToEdit: PropTypes.oneOfType([PropTypes.array]).isRequired,
+  expenseToEdit: PropTypes.shape({
+    id: PropTypes.number,
+    value: PropTypes.number,
+    description: PropTypes.string,
+    currency: PropTypes.string,
+    method: PropTypes.string,
+    tag: PropTypes.string,
+  }).isRequired,
   currencie: PropTypes.oneOfType([PropTypes.array]).isRequired,
   // ask: PropTypes.number.isRequired,
   // id: PropTypes.number.isRequired,

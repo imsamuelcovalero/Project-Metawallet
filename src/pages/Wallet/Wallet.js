@@ -6,6 +6,7 @@ import { getCurrenciesThunk, excludeExpenses,
   activeEdit } from '../../actions';
 import EditarDespesa from '../../components/Despesas/EditarDespesa';
 import CriarDespesa from '../../components/Despesas/CriarDespesa';
+import EditarDespesaTabela from '../../components/Despesas/EditarDespesaTabela';
 import { DivDespesas, DivGlobal, Table, HeaderS } from './Style';
 
 class Wallet extends React.Component {
@@ -68,46 +69,57 @@ class Wallet extends React.Component {
           <tbody>
             {
               allExpenses.map((expense) => (
-                <tr key={ expense.id }>
-                  <td>{ expense.description }</td>
-                  <td>{ expense.tag }</td>
-                  <td>{ expense.method }</td>
-                  <td>{ parseFloat(expense.value).toFixed(2) }</td>
-                  {/* resolução com replace
+                (editActive && expense.id === expenseToEdit.id)
+                  ? (
+                    <EditarDespesaTabela
+                      expenseToEdit={ expenseToEdit }
+                      key={ expense.id }
+                      expense={ expense }
+                    />
+                  )
+                  : (
+                    <tr key={ expense.id }>
+                      <td>{ expense.description }</td>
+                      <td>{ expense.tag }</td>
+                      <td>{ expense.method }</td>
+                      <td>{ parseFloat(expense.value).toFixed(2) }</td>
+                      {/* resolução com replace
                    <td>
                     { expense.exchangeRates[expense.currency]
                       .name.replace('/Real Brasileiro', '') }
                   </td> */}
-                  <td>
-                    { expense.exchangeRates[expense.currency]
-                      .name.split('/')[0] }
-                  </td>
-                  <td>
-                    { parseFloat(expense.exchangeRates[expense.currency].ask)
-                      .toFixed(2) }
-                  </td>
-                  <td>
-                    { (parseFloat(expense
-                      .exchangeRates[expense.currency].ask) * expense.value).toFixed(2)}
-                  </td>
-                  <td>Real</td>
-                  <td>
-                    <button
-                      type="button"
-                      data-testid="edit-btn"
-                      onClick={ () => this.handleEdit(expense) }
-                    >
-                      Editar
-                    </button>
-                    <button
-                      type="button"
-                      data-testid="delete-btn"
-                      onClick={ () => this.deleteSubmit(expense) }
-                    >
-                      Excluir
-                    </button>
-                  </td>
-                </tr>
+                      <td>
+                        { expense.exchangeRates[expense.currency]
+                          .name.split('/')[0] }
+                      </td>
+                      <td>
+                        { parseFloat(expense.exchangeRates[expense.currency].ask)
+                          .toFixed(2) }
+                      </td>
+                      <td>
+                        { (parseFloat(expense
+                          .exchangeRates[expense.currency]
+                          .ask) * expense.value).toFixed(2)}
+                      </td>
+                      <td>Real</td>
+                      <td>
+                        <button
+                          type="button"
+                          data-testid="edit-btn"
+                          onClick={ () => this.handleEdit(expense) }
+                        >
+                          Editar
+                        </button>
+                        <button
+                          type="button"
+                          data-testid="delete-btn"
+                          onClick={ () => this.deleteSubmit(expense) }
+                        >
+                          Excluir
+                        </button>
+                      </td>
+                    </tr>
+                  )
               ))
             }
           </tbody>
