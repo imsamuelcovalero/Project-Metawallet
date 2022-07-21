@@ -7,7 +7,7 @@ export const TrS = styled.tr`
   select {
       font-weight: bolder;
       font-size: 1.01em;
-      color: #EFA00B;
+      color: #FE5E41;
       background: transparent;
       cursor: pointer;
       height: 25px;
@@ -22,17 +22,20 @@ export const TrS = styled.tr`
         border-radius:5px;
       }
       option {
-        background: rgba(43, 45, 66, 1);
+        background: #4D7C8A;
       }
     }
   #input-expense-description {
     width: 200px;
-    text-align: start;
+    text-align: center;
   }
+  /* #input-expense-valor {
+    margin-right: 3px;
+  } */
   input {
     font-weight: bolder;
     font-size: 1.01em;
-    color: #EFA00B;
+    color: #FE5E41;
     border-top: none;
     border-left: none;
     border-right: none;

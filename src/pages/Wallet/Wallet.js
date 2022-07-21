@@ -30,6 +30,7 @@ class Wallet extends React.Component {
   }
 
   handleEdit = (expense) => {
+    console.log('expense', expense);
     const { edit } = this.props;
     this.setState({
       expenseToEdit: expense,
@@ -40,6 +41,8 @@ class Wallet extends React.Component {
   render() {
     const { allExpenses, editActive } = this.props;
     const { expenseToEdit } = this.state;
+    console.log('expenseToEdit', expenseToEdit);
+    console.log('allExpenses', allExpenses);
     return (
       <DivGlobal>
         <HeaderS>
@@ -68,17 +71,17 @@ class Wallet extends React.Component {
           </thead>
           <tbody>
             {
-              allExpenses.map((expense) => (
+              allExpenses.map((expense, index) => (
                 (editActive && expense.id === expenseToEdit.id)
                   ? (
                     <EditarDespesaTabela
+                      key={ index }
                       expenseToEdit={ expenseToEdit }
-                      key={ expense.id }
                       expense={ expense }
                     />
                   )
                   : (
-                    <tr key={ expense.id }>
+                    <tr key={ index }>
                       <td>{ expense.description }</td>
                       <td>{ expense.tag }</td>
                       <td>{ expense.method }</td>

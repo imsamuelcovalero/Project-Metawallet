@@ -9,13 +9,20 @@ class CriarDespesa extends Component {
   constructor() {
     super();
     this.state = {
-      id: 0,
+      id: '',
       value: 0,
       description: '',
       currency: 'USD',
       method: 'Dinheiro',
       tag: alimentacao,
     };
+  }
+
+  componentDidMount = () => {
+    const { allExpenses } = this.props;
+    this.setState({
+      id: allExpenses.length || 0,
+    });
   }
 
   handleChange = ({ target }) => {
@@ -133,6 +140,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 CriarDespesa.propTypes = {
+  allExpenses: PropTypes.oneOfType([PropTypes.array]).isRequired,
   currencie: PropTypes.oneOfType([PropTypes.array]).isRequired,
   addExpense: PropTypes.func.isRequired,
 };

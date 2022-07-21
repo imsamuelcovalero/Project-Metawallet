@@ -6,13 +6,14 @@ export const DivGlobal = styled.div`
   height: 100vh;
   width: 100%;
   align-items: center;
-  // justify-content: center;
   background-color: #FFF3F0;
 `;
 
 export const DivDespesas = styled.div`
   display: flex;
+  padding: 5px;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: 15px;
   margin-bottom: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -34,9 +35,6 @@ export const DivDespesas = styled.div`
       border: 1px solid black;
       margin-left: 2px;
       border-radius: 4px; 
-      // margin-top: 8px;
-      // margin-bottom: 5px;
-      // width: 50%;
       height: 20px; 
       align-self: center;
       color: #FFF3F0;
@@ -44,7 +42,7 @@ export const DivDespesas = styled.div`
       font-weight: bold;
       cursor: pointer;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
 `;
