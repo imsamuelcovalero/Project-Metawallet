@@ -30,7 +30,6 @@ class Wallet extends React.Component {
   }
 
   handleEdit = (expense) => {
-    console.log('expense', expense);
     const { edit } = this.props;
     this.setState({
       expenseToEdit: expense,
@@ -41,8 +40,6 @@ class Wallet extends React.Component {
   render() {
     const { allExpenses, editActive } = this.props;
     const { expenseToEdit } = this.state;
-    console.log('expenseToEdit', expenseToEdit);
-    console.log('allExpenses', allExpenses);
     return (
       <DivGlobal>
         <HeaderS>

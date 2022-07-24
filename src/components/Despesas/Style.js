@@ -47,9 +47,10 @@ export const TrS = styled.tr`
     width: 200px;
     text-align: center;
   }
-  /* #input-expense-valor {
+  #input-expense-valor {
     margin-right: 3px;
-  } */
+    width: 70px;
+  }
   input {
     font-weight: bolder;
     font-size: 1.01em;
