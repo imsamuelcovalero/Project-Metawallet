@@ -10,10 +10,21 @@ const GlobalStyle = createGlobalStyle`
     font-family: sans-serif;
     margin: 0px;
     input:-webkit-autofill,
-    input:-webkit-autofill:hover, 
-    input:-webkit-autofill:focus, 
-    input:-webkit-autofill:active{
-      -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    textarea:-webkit-autofill:active,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus,
+    select:-webkit-autofill:active {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+      -webkit-transition-delay: 9999s;
+      -webkit-transition-property: background-color, color;
     }
   }
 `;

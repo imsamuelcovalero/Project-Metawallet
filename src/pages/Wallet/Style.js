@@ -49,7 +49,7 @@ export const DivDespesas = styled.div`
 
 export const Table = styled.table`
   border: 2px solid #7F9C96;
-  width: 98vw;
+  width: 92vw;
   color: #EFA00B;
   margin-bottom: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);

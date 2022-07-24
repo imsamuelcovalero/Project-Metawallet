@@ -4,10 +4,28 @@ export const TrS = styled.tr`
   /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.50); */
   /* transform: scale(1.0005);
   transition: all 0.2s ease-in-out; */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  textarea:-webkit-autofill:active,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:active {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+    -webkit-transition-delay: 9999s;
+    -webkit-transition-property: background-color, color;
+  }
   select {
       font-weight: bolder;
       font-size: 1.01em;
-      color: #FE5E41;
+      color: ${({ oddOrEven }) => (oddOrEven === 'odd'
+    ? '#93032E' : '#FFF3F0')};
       background: transparent;
       cursor: pointer;
       height: 25px;
@@ -35,7 +53,8 @@ export const TrS = styled.tr`
   input {
     font-weight: bolder;
     font-size: 1.01em;
-    color: #FE5E41;
+    color: ${({ oddOrEven }) => (oddOrEven === 'odd'
+    ? '#93032E' : '#FFF3F0')};
     border-top: none;
     border-left: none;
     border-right: none;
