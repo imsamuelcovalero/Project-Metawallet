@@ -40,6 +40,7 @@ class Wallet extends React.Component {
   render() {
     const { allExpenses, editActive } = this.props;
     const { expenseToEdit } = this.state;
+    const TRES = 3;
     return (
       <DivGlobal>
         <HeaderS>
@@ -95,12 +96,12 @@ class Wallet extends React.Component {
                       </td>
                       <td>
                         { parseFloat(expense.exchangeRates[expense.currency].ask)
-                          .toFixed(2) }
+                          .toFixed(TRES) }
                       </td>
                       <td>
                         { (parseFloat(expense
                           .exchangeRates[expense.currency]
-                          .ask) * expense.value).toFixed(2)}
+                          .ask) * expense.value).toFixed(TRES)}
                       </td>
                       <td>Real</td>
                       <td>

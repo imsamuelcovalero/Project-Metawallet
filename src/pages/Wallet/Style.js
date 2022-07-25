@@ -25,10 +25,12 @@ export const DivDespesas = styled.div`
       margin-right: 5px;
       border: 1px solid #e1e5eb;
       outline: none;
+      margin-bottom: 5px;
     }
     select {
       color: #4D7C8A;
       margin-right: 5px;
+      margin-bottom: 5px;
     }
     button {
       padding: 2px;

@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 class Header extends Component {
   render() {
     const { userEmail, expense } = this.props;
+    const TRES = 3;
 
     // Cria uma constate para receber o retorno do reduce
     const valorTotal = expense.reduce((acc, curr) => {
@@ -30,7 +31,7 @@ class Header extends Component {
         </h4>
         <span>Despesas Totais:</span>
         <h4 data-testid="total-field">
-          { valorTotal.toFixed(2) }
+          { valorTotal.toFixed(TRES) }
         </h4>
         <h4 data-testid="header-currency-field">
           BRL
@@ -48,7 +49,6 @@ const mapStateToProps = (globalState) => ({
 Header.propTypes = {
   userEmail: PropTypes.string.isRequired,
   expense: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // expense: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default connect(mapStateToProps)(Header);
