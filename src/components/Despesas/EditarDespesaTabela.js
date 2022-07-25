@@ -64,11 +64,11 @@ class EditarDespesaTabela extends Component {
   }
 
   render() {
-    const { currencie, expense, oddOrEven } = this.props;
+    const { currencie, expense, isEven } = this.props;
     const { value, description, currency, method, tag } = this.state;
 
     return (
-      <TrS oddOrEven={ oddOrEven }>
+      <TrS isEven={ isEven }>
         <td>
           <label htmlFor="input-expense-description">
             <input
@@ -209,7 +209,7 @@ EditarDespesaTabela.propTypes = {
     }).isRequired,
   }).isRequired,
   edit: PropTypes.func.isRequired,
-  oddOrEven: PropTypes.string.isRequired,
+  isEven: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditarDespesaTabela);

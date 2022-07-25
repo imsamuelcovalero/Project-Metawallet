@@ -76,7 +76,7 @@ class Wallet extends React.Component {
                       key={ index }
                       expenseToEdit={ expenseToEdit }
                       expense={ expense }
-                      oddOrEven={ expense.id % 2 === 0 ? 'even' : 'odd' }
+                      isEven={ expense.id % 2 === 0 ? 'even' : 'odd' }
                     />
                   )
                   : (

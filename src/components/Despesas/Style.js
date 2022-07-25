@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const TrS = styled.tr`
-  /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.50); */
-  /* transform: scale(1.0005);
-  transition: all 0.2s ease-in-out; */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
@@ -24,7 +21,7 @@ export const TrS = styled.tr`
   select {
       font-weight: bolder;
       font-size: 1.01em;
-      color: ${({ oddOrEven }) => (oddOrEven === 'odd'
+      color: ${({ isEven }) => (isEven === 'odd'
     ? '#93032E' : '#FFF3F0')};
       background: transparent;
       cursor: pointer;
@@ -54,7 +51,7 @@ export const TrS = styled.tr`
   input {
     font-weight: bolder;
     font-size: 1.01em;
-    color: ${({ oddOrEven }) => (oddOrEven === 'odd'
+    color: ${({ isEven }) => (isEven === 'odd'
     ? '#93032E' : '#FFF3F0')};
     border-top: none;
     border-left: none;
