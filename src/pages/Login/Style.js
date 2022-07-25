@@ -10,22 +10,22 @@ export const DivGlobal = styled.div`
 `;
 
 export const Div = styled.div`
-  width: 400px;
-  height: 290px;
+  width: 450px;
+  height: 340px;
   border: 1px solid #e1e5eb;
   background: ${(props) => (props.corFundo ? props.corFundo : '#4D7C8A')};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
   color: #FE5E41;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   #logo {
     width: 90%;
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 25px;
   }
   #btc {
     width: 38px;
@@ -39,6 +39,7 @@ export const Div = styled.div`
   }
   form {
     input {
+      font-size: 18px;
       border: 1px solid #e1e5eb;
       outline: none;
       width: 100%;
