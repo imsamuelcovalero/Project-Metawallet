@@ -84,7 +84,7 @@ class Wallet extends React.Component {
                       <td>{ expense.description }</td>
                       <td>{ expense.tag }</td>
                       <td>{ expense.method }</td>
-                      <td>{ parseFloat(expense.value).toFixed(2) }</td>
+                      <td>{ parseFloat(expense.value).toFixed(TRES) }</td>
                       {/* resolução com replace
                    <td>
                     { expense.exchangeRates[expense.currency]

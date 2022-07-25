@@ -95,6 +95,7 @@ class EditarDespesaTabela extends Component {
               <option>Trabalho</option>
               <option>Transporte</option>
               <option>Saúde</option>
+              <option>Outros</option>
             </select>
           </label>
         </td>
@@ -110,6 +111,7 @@ class EditarDespesaTabela extends Component {
               <option>Dinheiro</option>
               <option>Cartão de crédito</option>
               <option>Cartão de débito</option>
+              <option>Pix</option>
             </select>
           </label>
         </td>

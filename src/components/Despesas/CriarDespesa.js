@@ -101,6 +101,7 @@ class CriarDespesa extends Component {
             <option>Dinheiro</option>
             <option>Cartão de crédito</option>
             <option>Cartão de débito</option>
+            <option>Pix</option>
           </select>
         </label>
         <label htmlFor="select-expense-category">
@@ -117,6 +118,7 @@ class CriarDespesa extends Component {
             <option>Trabalho</option>
             <option>Transporte</option>
             <option>Saúde</option>
+            <option>Outros</option>
           </select>
         </label>
         <button
