@@ -1,6 +1,7 @@
 # Bem-vindo ao projeto Metawallet
 
 Metawallet é uma aplicação desenvolvida em React.js para controle de gastos pessoais. Nela, é possível fazer login e adicionar despesas com valor, descrição, moeda, método de pagamento e tag/tipo de despesa. As despesas contam com um valor de câmbio atualizado no momento da adição pela API e um valor convertido para Real (BRL). Além disso, é possível editar a descrição, tag, método de pagamento, valor e moeda da despesa. No header, é exibido o valor total das despesas.
+> Acesse o [deeploy da aplicação aqui](https://project-trybewallet-drab.vercel.app/)
 
 ## Sumário
 - [Bem-vindo ao projeto Metawallet](#bem-vindo-ao-projeto-metawallet)
