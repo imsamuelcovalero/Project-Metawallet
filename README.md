@@ -14,6 +14,10 @@ Metawallet é uma aplicação desenvolvida em React.js para controle de gastos p
  
 ## Preview
 
+### Visualização para mobile e mac
+[![Preview](https://img.youtube.com/vi/cCge-eZOrO0/0.jpg)](https://www.youtube.com/watch?v=cCge-eZOrO0)
+
+### Visualização para Linux
 https://user-images.githubusercontent.com/98184355/220782987-1dbe7797-e999-4183-9399-a23b37b0f843.mp4
 
 ## Contexto
