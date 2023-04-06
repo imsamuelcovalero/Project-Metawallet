@@ -1,7 +1,14 @@
 # Bem-vindo ao projeto Metawallet
 
 Metawallet é uma aplicação desenvolvida em React.js para controle de gastos pessoais. Nela, é possível fazer login e adicionar despesas com valor, descrição, moeda, método de pagamento e tag/tipo de despesa. As despesas contam com um valor de câmbio atualizado no momento da adição pela API e um valor convertido para Real (BRL). Além disso, é possível editar a descrição, tag, método de pagamento, valor e moeda da despesa. No header, é exibido o valor total das despesas.
-> Acesse o [deeploy da aplicação aqui](https://project-trybewallet-drab.vercel.app/)
+> - Veja o post sobre a aplicação [no LinkedIn aqui.](https://www.linkedin.com/posts/samuelcovalero_trybe-frontend-redux-activity-6957346599509323777-_uEj?utm_source=share&utm_medium=member_desktop)
+> - Acesse o [deeploy da aplicação aqui](https://project-trybewallet-drab.vercel.app/)
+<details>
+<summary>Informações para utilizar a aplicação no deploy</summary><br>
+ 
+ - Para logar, o email deve estar no padrão `user@email.com`, e a senha ter mais do que `6 caracteres`.
+ 
+</details>
 
 ## Sumário
 - [Bem-vindo ao projeto Metawallet](#bem-vindo-ao-projeto-metawallet)
@@ -15,11 +22,13 @@ Metawallet é uma aplicação desenvolvida em React.js para controle de gastos p
  
 ## Preview
 
-### Visualização para mobile e mac
-[![Preview](https://img.youtube.com/vi/cCge-eZOrO0/0.jpg)](https://www.youtube.com/watch?v=cCge-eZOrO0)
+**Visualização:**
 
-### Visualização para Linux
-https://user-images.githubusercontent.com/98184355/220782987-1dbe7797-e999-4183-9399-a23b37b0f843.mp4
+<div align="center">
+
+![metawallet2](https://user-images.githubusercontent.com/98184355/230403347-776cd48a-3668-4a37-8e2a-3feb82691299.gif)
+
+</div>
 
 ## Contexto
 A __aplicação Metawallet__ é uma ferramenta de controle financeiro que permite que o usuário:
